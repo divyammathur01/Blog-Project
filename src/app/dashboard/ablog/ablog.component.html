@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>S.No</th>
+            <th>Category Name</th>
+            <th>Blog Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Author</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let dta of blogArray ; let i = index">
+            <td >{{i+1}}</td>
+            <td >{{dta.Catname}}</td>
+            <td >{{dta.Blogname}}</td>
+            <td >{{dta.Desc}}</td>
+            <td >{{dta.Date}}</td>
+            <td >{{dta.Author}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editPost(dta)">Edit</button>&nbsp;&nbsp;
+                <button class="btn btn-danger" (click)="delPost(dta.$key)">Delete</button>
+            </td>
+            
+           
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,90 @@
+<div class="container">
+  <form #ff="ngForm">
+    <label>First-Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="fname"
+      [(ngModel)]="fname"
+      pattern="[a-zA-Z ]{3,30}"
+      required
+      #fn="ngModel"
+    /><br /><br />
+    <div *ngIf="fn.invalid && fn.touched">
+      <div *ngIf="fn.errors.pattern">Invalid First Name</div>
+      <div *ngIf="fn.errors.required">This Field is Required</div>
+    </div>
+    <label>Last-Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="lname"
+      [(ngModel)]="lname"
+      pattern="[a-zA-Z ]{3,30}"
+      required
+      #ln="ngModel"
+    /><br /><br />
+    <div *ngIf="ln.invalid && ln.touched">
+      <div *ngIf="ln.errors.pattern">Invalid Last Name</div>
+      <div *ngIf="ln.errors.required">This Field is Required</div>
+    </div>
+
+    <label>E-Mail</label>
+    <input
+      type="text"
+      class="form-control"
+      name="email"
+      [(ngModel)]="email"
+      pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required
+      #em="ngModel"
+    /><br /><br />
+    <div *ngIf="em.invalid && em.touched">
+      <div *ngIf="em.errors.pattern">Invalid E-Mail</div>
+      <div *ngIf="em.errors.required">This Field is Required</div>
+    </div>
+    <label>Mobile Number</label>
+    <input
+      type="text"
+      class="form-control"
+      name="mnum"
+      [(ngModel)]="mnum"
+      pattern="^((\\+91-?)|0)?[0-9]{10}$"
+      required
+      #mn="ngModel"
+    /><br /><br />
+    <div *ngIf="mn.invalid && mn.touched">
+      <div *ngIf="mn.errors.pattern">Invalid Mobile Number</div>
+      <div *ngIf="mn.errors.required">This Field is Required</div>
+    </div>
+    <label>Password</label>
+    <input
+      type="text"
+      class="form-control"
+      name="pass"
+      [(ngModel)]="pass"
+      pattern="[a-zA-Z ]{3,30}"
+      required
+      #psw="ngModel"
+    /><br /><br />
+    <div *ngIf="psw.invalid && psw.touched">
+      <div *ngIf="psw.errors.pattern">Invalid Password</div>
+      <div *ngIf="psw.errors.required">This Field is Required</div>
+    </div>
+    <label>Confirm password</label>
+    <input
+      type="text"
+      class="form-control"
+      name="cpass"
+      [(ngModel)]="cpass"
+      pattern="[a-zA-Z ]{3,30}"
+      required
+      #cps="ngModel"
+    /><br /><br>
+    <div *ngIf="cps.invalid && cps.touched">
+      <div *ngIf="cps.errors.pattern">Password does not match</div>
+      <div *ngIf="cps.errors.required">This Field is Required</div>
+    </div>
+    <button type="submit" class="btn btn-success btn-md"> Submit</button>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-sm-6 ">
+        <form [formGroup]="catform" (ngSubmit)="insertCat()">
+            <label >Category Name</label>
+            <input type="text" class="form-control" formControlName="catname">
+            <label >Category Description</label>
+            <input type="text" class="form-control" formControlName="catdesc">
+            <label >Date</label>
+            <input type="date" class="form-control" formControlName="catdate">
+            <br><br>
+            <input type="submit" class="btn btn-success" value="Insert Category">
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<app-aheader></app-aheader>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 ">
+            <div class="list-group">
+                <a routerLink="" class="list-group-item active">Home</a>
+                <a routerLink="./addblog" class="list-group-item">Add blog</a>
+                <a routerLink="./ablog" class="list-group-item">Blog</a>
+                <a routerLink="./addcat" class="list-group-item">Add Category</a>
+                <a routerLink="./cat" class="list-group-item">Category</a>
+                <a routerLink="./feed" class="list-group-item">Comment</a>
+                <a routerLink="./ublog" class="list-group-item">User</a>
+            </div>
+        </div>
+        <div class="col-sm-9"><router-outlet></router-outlet></div>
+    </div>
+</div>

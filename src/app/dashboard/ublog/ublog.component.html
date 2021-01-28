@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-6 ">
+        <form (ngSubmit)="updateBlog()">
+            <input type="hidden " name="$key" [(ngModel)]="bloData.$key">
+            <label >Category </label>
+            <select  type="text" class="form-control" name="Catname" [(ngModel)]="bloData.Catname">
+                <option value="1">Cat 1</option>
+                <option value="2">Cat 2</option>
+                <option value="3">Cat 3</option>
+                <option value="4">Cat 4</option>
+            </select>
+            <label >Blog Name</label>
+            <input type="text" class="form-control" name="Blogname" [(ngModel)]="bloData.Blogname">
+            <label >Blog Description</label>
+            <input type="text" class="form-control" name="Desc" [(ngModel)]="bloData.Desc">
+            <label >Blog Date</label>
+            <input type="date" class="form-control" name="Date" [(ngModel)]="bloData.Date">
+            <label >Blog Author</label>
+            <input type="text" class="form-control" name="Author" [(ngModel)]="bloData.Author">
+            <br><br>
+            <input type="submit" class="btn btn-success" value="Update Blog">
+        </form>
+    </div>
+</div>
